@@ -20,11 +20,7 @@ set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 endif()
 
-find_package(ImageMagick REQUIRED COMPONENTS Magick++ MagickCore)
-add_definitions(-DMAGICKCORE_QUANTUM_DEPTH=16)
-add_definitions(-DMAGICKCORE_HDRI_ENABLE=0)
-include_directories(${ImageMagick_INCLUDE_DIRS})
-target_link_libraries(${PROJECT_NAME} ${ImageMagick_LIBRARIES})
+
 
 pkg_check_modules(VIPS REQUIRED vips-cpp)
 include_directories(${VIPS_INCLUDE_DIRS})
