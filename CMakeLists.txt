@@ -22,7 +22,7 @@ endif()
 
 
 
-pkg_check_modules(VIPS REQUIRED vips-cpp)
+
 include_directories(${VIPS_INCLUDE_DIRS})
 link_directories(${VIPS_LIBRARY_DIRS})
 target_link_libraries(${PROJECT_NAME} ${VIPS_LDFLAGS})
